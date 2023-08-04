@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (var classNumber = 1; classNumber <= 3; classNumber++) {
+            var sum = 0;
+            var count = 0;
+
+            console.log(`Class ${classNumber}:`);
+
+            var grade = parseInt(prompt(`Enter grade for student ${count + 1} (or a negative number to finish):`));
+
+            while (grade >= 0) {
+                sum += grade;
+                count++;
+
+                grade = parseInt(prompt(`Enter grade for student ${count + 1} (or a negative number to finish):`));
+            }
+
+            if (count > 0) {
+                const average = sum / count;
+                console.log(`Class ${classNumber} average: ${average.toFixed(2)}`);
+            }
+            else {
+                console.log(`No grades entered for Class ${classNumber}`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
