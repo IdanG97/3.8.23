@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            var length = parseInt(prompt("Enter the length of the rectangle:"));
+            var width = parseInt(prompt("Enter the width of the rectangle:"));
+
+            if (length > 0 && width > 0) {
+                break;
+            }
+            else {
+                alert("Both length and width must be positive numbers. Please try again.");
+            }
+        }
+
+        var rectangleDiv = document.createElement("div");
+        rectangleDiv.style.width = width + "px";
+        rectangleDiv.style.height = length + "px";
+        rectangleDiv.style.border = "1px solid black";
+
+        document.body.appendChild(rectangleDiv);
+
+    </script>
+</body>
+
+</html>
